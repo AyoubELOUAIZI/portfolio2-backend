@@ -4,7 +4,9 @@ import { verifyJwt } from '../middleware/authMiddleware.js';
 
 const router = Router();
 
-router.post('/sign-in', userController.signIn);
 router.get('/my-account', verifyJwt, userController.UserAccount);
+router.post('/sign-in', userController.signIn);
+router.post('/sign-up', userController.signUp);
+router.get('/sign-out', userController.signOut);
 
 export default router;
