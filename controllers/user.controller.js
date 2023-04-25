@@ -95,6 +95,8 @@ const signUp = async (req, res) => {
         return res.status(400).json({ error: "Please enter your username" });
     } else if (userName.length > 20) {
         return res.status(400).json({ error: "Your username is too long" });
+    } else if (userName.length < 5) {
+        return res.status(400).json({ error: "Your username is too short" });
     }
 
     if (!linkedin) {
