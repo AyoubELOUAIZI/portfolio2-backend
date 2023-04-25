@@ -68,8 +68,8 @@ const signIn = async (req, res) => {
 };
 
 const signUp = async (req, res) => {
-    console.log('req.body')
-    console.log(req.body)
+    // console.log('req.body')
+    // console.log(req.body)
     const { email, userName, linkedin, photo, password } = req.body;
 
     //check data
