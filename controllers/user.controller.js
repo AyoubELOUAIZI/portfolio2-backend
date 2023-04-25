@@ -59,7 +59,7 @@ const signIn = async (req, res) => {
             path: '/',
         }).status(200).json({ Account: account });
 
-        console.log('sign in successfully');
+       // console.log('sign in successfully');
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Server error to sign in.' });
@@ -139,7 +139,7 @@ const signUp = async (req, res) => {
             path: '/',
         }).status(200).json({ Account: account });
 
-        console.log('sign up successfully');
+      //  console.log('sign up successfully');
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Server error to sign up.' });
