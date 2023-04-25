@@ -32,8 +32,17 @@ const getAccountById = async (id) => {
     });
 };
 
+
+const updateAccount = async (id, updates) => {
+    return await prisma.account.update({
+        where: { account_id: parseInt(id) },
+        data: updates
+    });
+};
+
 export default {
     createAccount,
     findAccountByEmailAndPassword,
     getAccountById,
+    updateAccount,
 }
